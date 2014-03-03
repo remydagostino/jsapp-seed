@@ -1,0 +1,23 @@
+{
+  "name": "my-app",
+  "description": "Your description here",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mangolaw/jsapp-seed.git"
+  },
+  "author": "Remy D'Agostino",
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.14",
+    "gulp-uglify": "~0.2.1",
+    "through": "~2.3.4",
+    "gulp-jshint": "~1.4.2",
+    "browser-resolve": "~1.2.2",
+    "console-browserify": "~1.0.3",
+    "gulp-browserify": "~0.4.6",
+    "gulp-less": "~1.2.1",
+    "gulp-clean": "~0.2.4",
+    "gulp-serve": "~0.1.1"
+  },
+  "dependencies": {}
+}
