@@ -54,7 +54,7 @@ gulp.task('assets', function(){
 
 gulp.task('watch', function() {
 	gulp.watch('./src/css/**/*', ['less']);
-	gulp.watch(['./src/js/**/*.js'], ['lint']);
+	gulp.watch(['./src/js/**/*.js'], ['scripts', 'lint']);
 	gulp.watch(['./src/img/**/*', './src/fonts/**/*', './src/index.html'], ['assets']);
 });
 
