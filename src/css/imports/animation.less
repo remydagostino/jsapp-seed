@@ -1,32 +1,32 @@
 #animation {
-	// The element comes out of nowhere and grows onto the page
-	.bounce-in(@time: 0.3s, @wait: 0.0s) {
-		animation: bounce-in @time ease-in-out @wait;
-	}
-	
-	// The element looks like it's coming out of the page - right at you
-	.blow-out(@time: 0.3s, @wait: 0.0s) {
-		animation: blow-out @time linear @wait;
-	}
+  // The element comes out of nowhere and grows onto the page
+  .bounce-in(@time: 0.3s, @wait: 0.0s) {
+    animation: bounce-in @time ease-in-out @wait;
+  }
+
+  // The element looks like it's coming out of the page - right at you
+  .blow-out(@time: 0.3s, @wait: 0.0s) {
+    animation: blow-out @time linear @wait;
+  }
 }
 
 .bounce-in {
-	#animation.bounce-in();
+  #animation.bounce-in();
 }
 
 .blow-out {
-	#animation.blow-out();
+  #animation.blow-out();
 }
 
 /* ========================================
-	Keyframes 
-	=======================================*/
+  Keyframes 
+  =======================================*/
 @keyframes bounce-in {
-	0% { opacity: 0; transform: scale(0.2); }
-	100% { opacity: 1; transform: scale(1); }
+  0% { opacity: 0; transform: scale(0.2); }
+  100% { opacity: 1; transform: scale(1); }
 }
 
 @keyframes blow-out {
-	0% { transform: scale(1); }
-	100% { opacity: 0; transform: scale(1.3); }
+  0% { transform: scale(1); }
+  100% { opacity: 0; transform: scale(1.3); }
 }

@@ -1,12 +1,12 @@
-var gulp = require('gulp'),
-  gutil = require('gulp-util'),
+var gulp     = require('gulp'),
+  gutil      = require('gulp-util'),
   browserify = require('gulp-browserify'),
-  prefix = require('gulp-autoprefixer'),
-  less = require('gulp-less'),
-  clean = require('gulp-clean'),
-  uglify = require('gulp-uglify'),
-  serve = require('gulp-serve'),
-  jshint = require('gulp-jshint');
+  prefix     = require('gulp-autoprefixer'),
+  less       = require('gulp-less'),
+  rimraf     = require('gulp-rimraf'),
+  uglify     = require('gulp-uglify'),
+  serve      = require('gulp-serve'),
+  jshint     = require('gulp-jshint');
 
 gulp.task('lint', function() {
   gulp.src('./src/js/**/*.js')
@@ -17,7 +17,7 @@ gulp.task('lint', function() {
 // Cleanup
 gulp.task('clean', function() {
   gulp.src('build/*', { read: false})
-    .pipe(clean());
+    .pipe(rimraf());
 });
 
 // Scripts

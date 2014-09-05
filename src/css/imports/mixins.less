@@ -19,73 +19,73 @@
 
 // Grid
 .make-row() {
-	// Negative margin the row out to align the content of columns
-	margin-left: -@grid-column-padding;
-	margin-right: -@grid-column-padding;
-	// Then clear the floated columns
-	.clearfix();
+  // Negative margin the row out to align the content of columns
+  margin-left: -@grid-column-padding;
+  margin-right: -@grid-column-padding;
+  // Then clear the floated columns
+  .clearfix();
 }
 .make-column(@columns) {
-	@media (min-width: @grid-float-breakpoint) {
-		float: left;
-		// Calculate width based on number of columns available
-		width: percentage(@columns / @grid-columns);
-	}
-	// Prevent columns from collapsing when empty
-	min-height: 1px;
-	// Set inner padding as gutters instead of margin
-	padding-left: @grid-column-padding;
-	padding-right: @grid-column-padding;
-	// Proper box-model (padding doesn't add to width)
-	box-sizing: border-box;
+  @media (min-width: @grid-float-breakpoint) {
+    float: left;
+    // Calculate width based on number of columns available
+    width: percentage(@columns / @grid-columns);
+  }
+  // Prevent columns from collapsing when empty
+  min-height: 1px;
+  // Set inner padding as gutters instead of margin
+  padding-left: @grid-column-padding;
+  padding-right: @grid-column-padding;
+  // Proper box-model (padding doesn't add to width)
+  box-sizing: border-box;
 }
 .make-column-offset(@columns) {
-	@media (min-width: @grid-float-breakpoint) {
-		margin-left: percentage(@columns / @grid-columns);
-	}
+  @media (min-width: @grid-float-breakpoint) {
+    margin-left: percentage(@columns / @grid-columns);
+  }
 }
 
 // Resize anything
 .resizable(@direction) {
-	resize: @direction; // Options: horizontal, vertical, both
-	overflow: auto; // Safari fix
+  resize: @direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
 }
 
 // Gradients
 #gradient {
-	.horizontal(@startColor: #555, @endColor: #333) {
-		background-color: @endColor;
-		background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
-		background-repeat: repeat-x;
-	}
-	.vertical(@startColor: #555, @endColor: #333) {
-		background-color: @endColor;
-		background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
-		background-repeat: repeat-x;
-	}
-	.directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
-		background-color: @endColor;
-		background-repeat: repeat-x;
-		background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
-	}
-	.horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
-		background-color: mix(@midColor, @endColor, 80%);
-		background-image: linear-gradient(to right, @startColor, @midColor @colorStop, @endColor);
-		background-repeat: no-repeat;
-	}
-	.vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
-		background-color: mix(@midColor, @endColor, 80%);
-		background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
-		background-repeat: no-repeat;
-	}
-	.radial(@innerColor: #555, @outerColor: #333) {
-		background-color: @outerColor;
-		background-repeat: no-repeat;
-	}
-	.striped(@color: #555, @angle: 45deg) {
-		background-color: @color;
-		background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
-	}
+  .horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+  }
+  .vertical(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+  }
+  .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
+  }
+  .horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: linear-gradient(to right, @startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+  }
+  .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+  }
+  .radial(@innerColor: #555, @outerColor: #333) {
+    background-color: @outerColor;
+    background-repeat: no-repeat;
+  }
+  .striped(@color: #555, @angle: 45deg) {
+    background-color: @color;
+    background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  }
 }
 
 
@@ -95,41 +95,41 @@
 
 // Center-align a block level element
 .center-block() {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 // Sizing shortcuts
 .size(@width, @height) {
-	width: @width;
-	height: @height;
+  width: @width;
+  height: @height;
 }
 
 .square(@size) {
-	.size(@size, @size);
+  .size(@size, @size);
 }
 
 // Text overflow
 //
 // Requires inline-block or block for proper styling
 .text-truncate() {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 // Retina images
 //
 // Retina background-image support with non-retina fall back
 .retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
-	background-image: url("@{file-1x}");
+  background-image: url("@{file-1x}");
 
-	@media
-	only screen and (min-device-pixel-ratio: 2),
-	only screen and (min-resolution: 192dpi),
-	only screen and (min-resolution: 2dppx) {
-		background-image: url("@{file-2x}");
-		background-size: @width-1x @height-1x;
-	}
+  @media
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
 }

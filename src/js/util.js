@@ -1,6 +1,6 @@
 function testMe() {
-	return 'yes';
-};
+  return 'yes';
+}
 
 module.exports = { testMe: testMe };
 
