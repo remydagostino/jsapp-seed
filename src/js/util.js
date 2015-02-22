@@ -1,6 +1,6 @@
-function testMe() {
-  return 'yes';
+const testMe = (x) => {
+  return 'yes: ' + x;
 }
 
-module.exports = { testMe: testMe };
+export default { testMe };
 

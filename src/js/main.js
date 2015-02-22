@@ -1,3 +1,3 @@
-var util = require('./util');
+import util from './util';
 
 util.testMe();
