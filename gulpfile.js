@@ -1,5 +1,5 @@
 var babelify   = require('babelify'),
-    browserify = require('browserify')  ,
+    browserify = require('browserify'),
     del        = require('del'),
     gulp       = require('gulp'),
     gutil      = require('gulp-util'),
@@ -30,7 +30,7 @@ gulp.task('clean', function(cb) {
 });
 
 // Stylesheets
-gulp.task('less', function(){
+gulp.task('less', function() {
   gulp.src('src/css/style.less')
   .pipe(less({
     paths: ['src/less']
@@ -41,7 +41,7 @@ gulp.task('less', function(){
 });
 
 // Index, images, fonts
-gulp.task('assets', function(){
+gulp.task('assets', function() {
   gulp.src('src/index.html')
   .pipe(gulp.dest('./build/'));
 

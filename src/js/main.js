@@ -1,3 +1,3 @@
-import util from './util';
+const util = require('./util');
 
-util.testMe();
+window.console.log(util.testMe('thing'));
